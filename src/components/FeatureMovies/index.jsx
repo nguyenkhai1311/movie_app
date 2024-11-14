@@ -5,6 +5,9 @@ import PaginateIndicator from "./PaginateIndicator";
 const FeatureMovies = () => {
   const [movies, setMovies] = useState([]);
   const [activeMovieId, setActiveMovieId] = useState();
+  // const [currentIndex, setCurrentIndex] = useState(0);
+
+  // const timeoutRef = useRef(null);
 
   useEffect(() => {
     fetch("https://api.themoviedb.org/3/movie/popular", {
@@ -21,6 +24,23 @@ const FeatureMovies = () => {
       setActiveMovieId(popularMovies[0].id);
     });
   }, []);
+
+  // useEffect(() => {
+  //   const nextSlide = () => {
+  //     setCurrentIndex((current) =>
+  //       current === movies.length - 1 ? 0 : current + 1,
+  //     );
+  //     setActiveMovieId(movies[currentIndex].id);
+  //   };
+
+  //   timeoutRef.current = setTimeout(nextSlide, 5000);
+
+  //   return function () {
+  //     if (timeoutRef.current) {
+  //       clearTimeout(timeoutRef.current);
+  //     }
+  //   };
+  // }, [movies, currentIndex]);
 
   return (
     <div className="relative text-white">
