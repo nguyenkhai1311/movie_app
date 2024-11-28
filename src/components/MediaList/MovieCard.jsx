@@ -1,5 +1,5 @@
-import CircularProgressBar from "./CircularProgressBar";
 import PropTypes from "prop-types";
+import CircularProgressBar from "../CircularProgressBar";
 
 const MovieCard = ({ title, releaseDate, posterPath, pointer, mediaType }) => {
   return (
