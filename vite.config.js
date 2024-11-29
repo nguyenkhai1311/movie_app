@@ -15,6 +15,8 @@ export default defineConfig({
       "@libs": path.resolve(__dirname, "src/libs"),
       // eslint-disable-next-line no-undef
       "@pages": path.resolve(__dirname, "src/pages"),
+      // eslint-disable-next-line no-undef
+      "@hooks": path.resolve(__dirname, "src/hooks"),
     },
   },
 });

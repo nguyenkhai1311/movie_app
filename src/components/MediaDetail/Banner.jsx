@@ -20,7 +20,7 @@ const Banner = ({ mediaInfo }) => {
   return (
     <div className="relative overflow-hidden text-white shadow-sm shadow-slate-700">
       <img
-        className="absolute inset-0 brightness-[.2]"
+        className="absolute inset-0 w-full brightness-[.2]"
         src={`https://image.tmdb.org/t/p/original${mediaInfo.backdrop_path}`}
         alt="BackDrop Image"
       />
@@ -29,6 +29,8 @@ const Banner = ({ mediaInfo }) => {
           <img
             src={`https://image.tmdb.org/t/p/original${mediaInfo.poster_path}`}
             alt="Image"
+            width={600}
+            height={900}
           />
         </div>
         <div className="flex-[2] text-[1.2vw]">
